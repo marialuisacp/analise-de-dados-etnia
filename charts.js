@@ -7,7 +7,7 @@ const barChart = (dataSouce) => {
     left: 104
   };
 
-  const width = 960 - margin.left - margin.right,
+  const width = 480 - margin.left - margin.right,
     height = 200;
 
   const heightBar = 8;
@@ -50,14 +50,14 @@ const barChart = (dataSouce) => {
     .attr('width', (d) => x_scale(d.value));
 
   bars.append('text')
-    .attr('class', 'label')
-    .attr('y', (d) => calcMiddleBar(d) + 8)
-    .attr('x', (d) => x_scale(d.value) + 16)
-    .text((d) => d.value);
-
-  bars.append('text')
     .attr('class', 'label-percent')
     .attr('y', (d) => calcMiddleBar(d) + 8)
-    .attr('x', (d) => x_scale(d.value) + 90)
+    .attr('x', (d) => x_scale(d.value) + 8)
     .text((d) => d.percent + '%');
+
+  bars.append('text')
+    .attr('class', 'label')
+    .attr('y', (d) => calcMiddleBar(d) + 8)
+    .attr('x', (d) => x_scale(d.value) + 56)
+    .text((d) => d.value);
 };

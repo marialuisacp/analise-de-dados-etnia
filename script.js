@@ -1,4 +1,4 @@
-const height = 800, width = 900,
+const height = 800, width = 760,
   margin = { left: 50, top: 50, bottom: 50, right: 50 };
 const color = d3.scaleLinear().domain([0, 1])
   .range(['#F6C4A3', '#5E2C0B'])

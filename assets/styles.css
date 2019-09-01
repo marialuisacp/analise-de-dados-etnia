@@ -21,6 +21,19 @@ h1 *, h2 *, h3 *, h4 *{
   display: block;
 }
 
+.charts-box {
+  display: flex;
+  vertical-align: middle;
+}
+
+.info-details {
+  display: block;
+  margin-top: 50%;
+  position: relative;
+  top: -400px;
+  margin-left: -100px;
+}
+
 .bar-chart .tick text{
   font-size: 16px
 }
