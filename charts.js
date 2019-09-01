@@ -44,6 +44,7 @@ const barChart = (dataSouce) => {
 
   bars.append('rect')
     .attr('class', 'bar')
+    .attr('fill', (d) => d.color)
     .attr('y', (d) => calcMiddleBar(d))
     .attr('height', heightBar)
     .attr('x', 0)

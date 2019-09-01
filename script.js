@@ -29,7 +29,6 @@ const colorByData = (item_map, data) => {
 
 const showDetails = (item, data) => {
   const currentState = data.find((state) => state.id === item.id);
-  // console.log(currentState);
 };
 
 const hideDetails = (data) => {
@@ -44,7 +43,7 @@ d3.json('data/br-states-info.json').then((data_map) => {
       .append('path')
       .attr('d', path)
       .attr('fill', (d) => colorByData(d, data_br_etnia))
-      .on('mouseover', (d) => showDetails(d, data_br_etnia))
+    // .on('mouseover', (d) => showDetails(d, data_br_etnia))
     // .on('mouseout', (d) => hideDetails(d))
 
     barChart(data_br_etnia[0]);
